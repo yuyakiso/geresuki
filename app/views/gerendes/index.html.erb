@@ -11,7 +11,11 @@
     <ul class='item-lists'>
     <% @gerendes.each do |gerende|%>
       <li class='list'>
-        <%= link_to gerende.name %>
-        <%= link_to "(#{gerende.prefecture.name})" %>
+        <%= link_to gerende.name, gerende_path(gerende.id) %>
+        <%= link_to "(#{gerende.prefecture.name})",gerendes_path(gerende.prefecture.id) %>
       </li>
+
     <% end %>
+  <%= paginate @gerendes, outer_window: 3 %>
+
+</div>
