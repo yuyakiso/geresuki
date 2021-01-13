@@ -1,0 +1,41 @@
+<h1>
+  <%= @gerende.name %>
+</h1>
+
+<h3>
+  <%= link_to '今日の天気はこちら', "#" %>
+</h3>
+
+<h3>
+  <%= link_to '積雪量はこちら', "#" %>
+</h3>
+<div class="container">
+  <% if user_signed_in? %>
+    <%= form_with(model: [@gerende, @comment], local: true) do |form| %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= form.file_field :image, class: 'hidden' %>
+      </label>
+      <%= form.text_area :text, placeholder: "ゲレンデの好きなところを投稿しよう！（例　地形遊びが楽しい、〜〜コースは初心者に優しい等）", rows: "5" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの投稿には<%= link_to "新規登録",new_user_registration_path%>/<%= link_to "ログイン", new_user_session_path %>が必要です ※※※</p>
+    </strong>
+  <% end %>
+  <div class="comments">
+    <h4>
+    ＜コメント一覧＞
+    </h4>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <p>
+          <%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
+          <strong><%= link_to comment.user.nickname %></strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "トップページへ", root_path%>
+</div>

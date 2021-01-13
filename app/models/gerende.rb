@@ -13,4 +13,5 @@ class Gerende < ApplicationRecord
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+  has_many :comments
 end
