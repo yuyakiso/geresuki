@@ -1,4 +1,4 @@
-Gerende.create(name: 'ルスツリゾート(北海道)', prefecture_id: '1')
+Gerende.create(name: 'ルスツリゾート(北海道)', prefecture_id: '1', image: "https://rusutsu.com/wp-content/uploads/trail-map-winter.jpg")
 Gerende.create(name: '富良野スキー場(北海道)', prefecture_id: '1')
 Gerende.create(name: '星野リゾート　トマム　スキー場(北海道)', prefecture_id: '1')
 Gerende.create(name: '函館七飯スノーパーク(北海道)', prefecture_id: '1')

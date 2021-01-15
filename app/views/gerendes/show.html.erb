@@ -3,7 +3,6 @@
 <h1>
   <%= @gerende.name %>
 </h1>
-
 <h3>
   <%= link_to '今日の天気はこちら', "#" %>
 </h3>
@@ -11,6 +10,8 @@
 <h3>
   <%= link_to '積雪量はこちら', "#" %>
 </h3>
+<div>ゲレンデマップ</div>
+<%= image_tag @gerende.image, class: 'gerende-image' %>
 <div class="container">
   <% if user_signed_in? %>
     <%= form_with(model: [@gerende, @comment], local: true) do |form| %>
