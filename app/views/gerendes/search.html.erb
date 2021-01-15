@@ -7,7 +7,6 @@
     <% @gerendes.each do |gerende|%>
       <li class='list'>
         <%= link_to gerende.name %>
-        <%= link_to "(#{gerende.prefecture.name})" %>
       </li>
     <% end %>
 <%= render "shared/footer" %>

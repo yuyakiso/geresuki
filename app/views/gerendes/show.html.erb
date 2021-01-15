@@ -32,13 +32,12 @@
     <% if @comments %>
       <% @comments.each do |comment| %>
         <p>
-          <%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
-          <strong><%= link_to comment.user.nickname %></strong>
+        <strong><%= link_to comment.user.nickname %></strong>
+        <%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
           <%= comment.text %>
         </p>
       <% end %>
     <% end %>
   </div>
-  <%= link_to "トップページへ", root_path%>
 </div>
 <%= render "shared/footer" %>
