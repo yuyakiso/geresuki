@@ -1,5 +1,4 @@
-
-<header class='top-page-header'>
+<header class='header'>
   <div class='search-bar-contents'>
     <%#= link_to image_tag("#", class:"furima-icon"), "/" %>
      <%= form_with(url: search_gerendes_path, local: true, method: :get, class: "search-form") do |f|%>
@@ -15,7 +14,45 @@
   </div>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to '#', "#", class: "category-list" %></li>
+      <li　class= "category-list" id="lists"></li>都道府県
+        <ul class="show-lists hidden" id="pull-down">
+          <li class="pull-down-list"><%= link_to'北海道',"gerendes/search?keyword=北海道&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'青森',"gerendes/search?keyword=青森&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'岩手',"gerendes/search?keyword=岩手&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'宮城',"gerendes/search?keyword=宮城&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'秋田',"gerendes/search?keyword=秋田&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'山形',"gerendes/search?keyword=山形&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'福島',"gerendes/search?keyword=福島&commit=検索"%></li>
+          <li class="pull-down-list"><%= link_to'栃木',"gerendes/search?keyword=栃木&commit=検索"%></li>
+          <li class="pull-down-list">群馬</li>
+          <li class="pull-down-list">埼玉</li>
+          <li class="pull-down-list">神奈川</li>
+          <li class="pull-down-list">新潟</li>
+          <li class="pull-down-list">富山</li>
+          <li class="pull-down-list">石川</li>
+          <li class="pull-down-list">福井</li>
+          <li class="pull-down-list">山梨</li>
+          <li class="pull-down-list">長野</li>
+          <li class="pull-down-list">岐阜</li>
+          <li class="pull-down-list">静岡</li>
+          <li class="pull-down-list">愛知</li>
+          <li class="pull-down-list">三重</li>
+          <li class="pull-down-list">滋賀</li>
+          <li class="pull-down-list">京都</li>
+          <li class="pull-down-list">兵庫</li>
+          <li class="pull-down-list">奈良</li>
+          <li class="pull-down-list">鳥取</li>
+          <li class="pull-down-list">島根</li>
+          <li class="pull-down-list">岡山</li>
+          <li class="pull-down-list">広島</li>
+          <li class="pull-down-list">山口</li>
+          <li class="pull-down-list">徳島</li>
+          <li class="pull-down-list">愛媛</li>
+          <li class="pull-down-list">高知</li>
+          <li class="pull-down-list">佐賀</li>
+          <li class="pull-down-list">大分</li>
+
+        </ul>      
       <li><%= link_to '#', "#", class: "brand-list" %></li>
     </ul>
     <ul class='lists-right'>
