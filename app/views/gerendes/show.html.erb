@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<h1>
+<h1 class= "title-contents">
   <%= @gerende.name %>
 </h1>
 <h3>
@@ -17,9 +17,9 @@
     <%= form_with(model: [@gerende, @comment], local: true) do |form| %>
       <label class="form-image">
         <span class="image-file">画像</span>
-        <%= form.file_field :image, class: 'hidden' %>
+        <%= form.file_field :image, class: 'hidden-image' %>
       </label>
-      <%= form.text_area :text, placeholder: "ゲレンデの好きなところを投稿しよう！（例　地形遊びが楽しい、〜〜コースは初心者に優しい等）", rows: "5" %>
+      <%= form.text_area :text, placeholder: "ゲレンデの好きなところを投稿しよう！（例　地形遊びが楽しい、〜〜コースは初心者に優しい等）", rows: "5", class: "text-area" %>
       <%= form.submit "SEND" %>
     <% end %>
   <% else %>
@@ -27,7 +27,7 @@
     </strong>
   <% end %>
   <div class="comments">
-    <h4>
+    <h4 class= "comment-title">
     ＜コメント一覧＞
     </h4>
     <% if @comments %>
@@ -36,6 +36,7 @@
         <strong><%= link_to comment.user.nickname %></strong>
         <%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
           <%= comment.text %>
+          <%= link_to '削除', gerende_comment_path(comment.id), method: :delete, class:'comment-destroy' %>
         </p>
       <% end %>
     <% end %>
