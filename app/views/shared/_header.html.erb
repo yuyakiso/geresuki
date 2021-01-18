@@ -1,11 +1,9 @@
 <header class='header'>
   <div class='search-bar-contents'>
-    <%#= link_to image_tag("#", class:"furima-icon"), "/" %>
-     <%= form_with(url: search_gerendes_path, local: true, method: :get, class: "search-form") do |f|%>
-      <div class="selection-field">
-        <%= f.label :gerende, 'ゲレンデ検索'%>
-        <%= f.text_field :keyword,placeholder: "ゲレンデ名や都道府県名", class: "search-form"%>
-      </div>
+    <%= link_to image_tag("geresuki2", class:"geresuki-icon"), "/" %>
+    <%= form_with(url: search_gerendes_path, local: true, method: :get, class: "search-form") do |f|%>
+      <%= f.label :gerende, 'ゲレンデ検索',class: "search-title"%>
+      <%= f.text_field :keyword,placeholder: "ゲレンデ名や都道府県名", class: "search-text"%>
       <%= f.submit "検索",class: "search-btn"%>
     <% end %>
         <%#= image_tag "search.png", class:"search-icon" %>
@@ -53,7 +51,6 @@
           <li class="pull-down-list">大分</li>
 
         </ul>      
-      <li><%= link_to '#', "#", class: "brand-list" %></li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
