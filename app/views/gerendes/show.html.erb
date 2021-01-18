@@ -1,42 +1,49 @@
 <%= render "shared/header" %>
-
-<h1 class= "title-contents">
-  <%= @gerende.name %>
-</h1>
-<h3>
-  <%= link_to '今日の天気はこちら', "#" %>
-</h3>
-
-<h3>
-  <%= link_to '積雪量はこちら', "#" %>
-</h3>
-<div>ゲレンデマップ</div>
+<div class= "show-title">
+  <h1>
+    <%= @gerende.name %>
+  </h1>
+</div>
+  <h3 class>
+    <%= link_to '今日の天気はこちら', "#",{:class =>"subtitle"} %>
+  </h3>
+  <h3>
+    <%= link_to '積雪量はこちら', "#",{:class =>"subtitle"} %>
+  </h3>
+<div class= "subtitle">ゲレンデマップ</div>
 <%= image_tag @gerende.image, class: 'gerende-image' %>
 <div class="container">
   <% if user_signed_in? %>
+  <h4>＜コメント投稿＞</h4>
     <%= form_with(model: [@gerende, @comment], local: true) do |form| %>
-      <label class="form-image">
-        <span class="image-file">画像</span>
-        <%= form.file_field :image, class: 'hidden-image' %>
-      </label>
-      <%= form.text_area :text, placeholder: "ゲレンデの好きなところを投稿しよう！（例　地形遊びが楽しい、〜〜コースは初心者に優しい等）", rows: "5", class: "text-area" %>
-      <%= form.submit "SEND" %>
+      <div class="form-input">
+        <%= form.text_area :text, placeholder: "ゲレンデの好きなところを投稿しよう！（例　地形遊びが楽しい、〜〜コースは初心者に優しい等）", rows: "5", class: "text-area" %>
+        <label class="form-image">
+          <span class="image-file">画像</span>
+          <%= form.file_field :image, class: 'hidden' %>
+        </label>
+          <%= form.submit "送信",class: "form-submit" %>
+      </div>
     <% end %>
   <% else %>
     <strong><p>※※※ コメントの投稿には<%= link_to "新規登録",new_user_registration_path%>/<%= link_to "ログイン", new_user_session_path %>が必要です ※※※</p>
     </strong>
   <% end %>
   <div class="comments">
-    <h4 class= "comment-title">
-    ＜コメント一覧＞
-    </h4>
+    <div class= "comment-title">
+      <h4>
+      ＜コメント一覧＞
+      </h4>
+    </div>
     <% if @comments %>
       <% @comments.each do |comment| %>
         <p>
-        <strong><%= link_to comment.user.nickname %></strong>
-        <%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
-          <%= comment.text %>
-          <%= link_to '削除', gerende_comment_path(comment.id), method: :delete, class:'comment-destroy' %>
+          <span class= "nickname"><strong><%= comment.user.nickname %></strong></span>
+          <br><%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
+          <%= link_to(gerende_comment_path(comment.id), data: { confirm: "削除しますか?" }, method: :delete, class:'comment-destroy') do %>
+            <button class="btn" >削除</button>
+          <% end %>
+          <br><span calss="comment-text"><%= comment.text %></span>
         </p>
       <% end %>
     <% end %>

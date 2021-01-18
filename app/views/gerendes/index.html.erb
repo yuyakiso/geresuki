@@ -1,14 +1,16 @@
 <%= render "shared/header" %>
+<div class='gerende-index'>
   <div>
     <%= image_tag 'geresuki1', class: 'main-image' %>
   </div>
-<div class='gerende-index'>
-    <h2 class='title'><%= link_to 'ゲレンデ一覧',root_path %></h2>
+    <h2>ゲレスキとは</h2>
+    <div class= "">ゲレスキとは各ゲレンデの「こんなところがスキ！」や「このコースのこんなところ面白い」などを画像や文字で投稿できます！そして、それをみてたくさんのゲレンデに行ってスノーシーズンを楽しむために使ってください！</div>
+    <h2><%= link_to 'ゲレンデ一覧',root_path,{:class =>"title"} %></h2>
 
     <ul class='item-lists'>
     <% @gerendes.each do |gerende|%>
-      <li class='list'>
-        <%= link_to gerende.name, gerende_path(gerende.id) %>
+      <li class="list">
+        <%= link_to gerende.name, gerende_path(gerende.id),{:class =>"list-text"} %>
       </li>
 
     <% end %>

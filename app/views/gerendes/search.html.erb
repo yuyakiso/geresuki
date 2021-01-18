@@ -1,9 +1,9 @@
 <%= render "shared/header" %>
+<div class='gerende-index'>
   <div class="images">
     <%= image_tag 'geresuki1' %>
   </div>
-<div class='gerende-index'>
-    <h2 class='title'><%=link_to 'ゲレンデ一覧',root_path %></h2>
+    <h2><%= link_to 'ゲレンデ一覧',root_path,{:class =>"title"} %></h2>
     
     <ul class='item-lists'>
     <% @gerendes.each do |gerende|%>
