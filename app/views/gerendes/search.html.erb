@@ -1,14 +1,14 @@
 <%= render "shared/header" %>
 <div class='gerende-index'>
   <div class="images">
-    <%= image_tag 'geresuki1' %>
+    <%= image_tag 'geresuki1', class: 'main-image'  %>
   </div>
     <h2><%= link_to 'ゲレンデ一覧',root_path,{:class =>"title"} %></h2>
     
     <ul class='item-lists'>
     <% @gerendes.each do |gerende|%>
       <li class='list'>
-        <%= link_to gerende.name %>
+        <%= link_to gerende.name, gerende_path(gerende.id),{:class =>"list-text"} %>
       </li>
     <% end %>
 
