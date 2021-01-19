@@ -73,6 +73,11 @@ body{
   color: #333333;
 }
 
+.show-lists{
+  column-count: 3;
+  background-color: white;
+}
+
 .lists-right {
   display: flex;
   list-style: none;
