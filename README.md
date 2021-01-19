@@ -15,6 +15,7 @@
 ｜------------------- | ---------- | ----------------------------- |
 ｜ name               | string     | null false                    |
 ｜ prefecture_id      | integer    | null false                    |
+｜ image              | string     | null false                    |
 
 ### Association
 - has_many :comments
