@@ -5,13 +5,15 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @gerende = Gerende.find(params[:id])
-    @comment = Comment.find(params[:id])
-    if @comment.user.id != current_user.id
-      redirect_to action: index
+    @gerende = Gerende.find(params[:gerende_id])
+    @comment = @gerende.comments.includes(:user)
+    @comments = @comment.find(params[:id])
+    if @comments.user_id != current_user.id
+      redirect_to gerende_path"#{@comments.gerende_id}"
+    else
+      @comments.destroy
+      redirect_to root_path
     end
-    @comment.destroy
-    redirect_to @gerende
   end
 
   private

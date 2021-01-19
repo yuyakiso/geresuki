@@ -40,9 +40,11 @@
         <p>
           <span class= "nickname"><strong><%= comment.user.nickname %></strong></span>
           <br><%= image_tag comment.image.variant(resize: '500x500'), class: 'comment-image' if comment.image.attached? %>
-          <%= link_to(gerende_comment_path(comment.id), data: { confirm: "削除しますか?" }, method: :delete, class:'comment-destroy') do %>
-            <button class="btn" >削除</button>
-          <% end %>
+          <% if user_signed_in? && comment.user_id == current_user.id %>
+            <%= link_to(gerende_comment_path(@gerende, comment), data: { confirm: "削除しますか?" }, method: :delete, class:'comment-destroy') do %>
+              <button class="btn" >削除</button>
+            <% end %>
+          <% end%>
           <br><span calss="comment-text"><%= comment.text %></span>
         </p>
       <% end %>
