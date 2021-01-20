@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html{
+  background-image:url('geresuki3.jpg');
+  background-size: 100px;
+  background-position: top center;
+}
 
 body{
   margin: 0;
