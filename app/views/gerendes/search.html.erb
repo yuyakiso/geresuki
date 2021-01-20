@@ -6,10 +6,14 @@
     <h2><%= link_to 'ゲレンデ一覧',root_path,{:class =>"title"} %></h2>
     
     <ul class='item-lists'>
+    <%if @gerendes.present? %>
     <% @gerendes.each do |gerende|%>
       <li class='list'>
         <%= link_to gerende.name, gerende_path(gerende.id),{:class =>"list-text"} %>
       </li>
+    <% end %>
+    <% else %>
+      検索結果はありません
     <% end %>
 
 <%= render "shared/footer" %>
