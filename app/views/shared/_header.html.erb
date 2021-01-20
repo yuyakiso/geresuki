@@ -13,41 +13,41 @@
     <ul class='lists-left'>
       <li　class= "category-list" id="lists"></li>都道府県
         <ul class="show-lists hidden" id="pull-down">
-          <li class="pull-down-list"><%= link_to'北海道',"gerendes/search?keyword=北海道&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'青森',"gerendes/search?keyword=青森&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'岩手',"gerendes/search?keyword=岩手&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'宮城',"gerendes/search?keyword=宮城&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'秋田',"gerendes/search?keyword=秋田&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'山形',"gerendes/search?keyword=山形&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'福島',"gerendes/search?keyword=福島&commit=検索"%></li>
-          <li class="pull-down-list"><%= link_to'栃木',"gerendes/search?keyword=栃木&commit=検索"%></li>
-          <li class="pull-down-list">群馬</li>
-          <li class="pull-down-list">埼玉</li>
-          <li class="pull-down-list">神奈川</li>
-          <li class="pull-down-list">新潟</li>
-          <li class="pull-down-list">富山</li>
-          <li class="pull-down-list">石川</li>
-          <li class="pull-down-list">福井</li>
-          <li class="pull-down-list">山梨</li>
-          <li class="pull-down-list">長野</li>
-          <li class="pull-down-list">岐阜</li>
-          <li class="pull-down-list">静岡</li>
-          <li class="pull-down-list">愛知</li>
-          <li class="pull-down-list">三重</li>
-          <li class="pull-down-list">滋賀</li>
-          <li class="pull-down-list">京都</li>
-          <li class="pull-down-list">兵庫</li>
-          <li class="pull-down-list">奈良</li>
-          <li class="pull-down-list">鳥取</li>
-          <li class="pull-down-list">島根</li>
-          <li class="pull-down-list">岡山</li>
-          <li class="pull-down-list">広島</li>
-          <li class="pull-down-list">山口</li>
-          <li class="pull-down-list">徳島</li>
-          <li class="pull-down-list">愛媛</li>
-          <li class="pull-down-list">高知</li>
-          <li class="pull-down-list">佐賀</li>
-          <li class="pull-down-list">大分</li>
+          <li class="pull-down-list"><%= link_to'北海道',search_gerendes_path(:keyword => "北海道")%></li>
+          <li class="pull-down-list"><%= link_to'青森',search_gerendes_path(:keyword => "青森")%></li>
+          <li class="pull-down-list"><%= link_to'岩手',search_gerendes_path(:keyword => "岩手")%></li>
+          <li class="pull-down-list"><%= link_to'宮城',search_gerendes_path(:keyword => "宮城")%></li>
+          <li class="pull-down-list"><%= link_to'秋田',search_gerendes_path(:keyword => "秋田")%></li>
+          <li class="pull-down-list"><%= link_to'山形',search_gerendes_path(:keyword => "山形")%></li>
+          <li class="pull-down-list"><%= link_to'福島',search_gerendes_path(:keyword => "福島")%></li>
+          <li class="pull-down-list"><%= link_to'栃木',search_gerendes_path(:keyword => "栃木")%></li>
+          <li class="pull-down-list"><%= link_to'群馬',search_gerendes_path(:keyword => "群馬")%></li>
+          <li class="pull-down-list"><%= link_to'埼玉',search_gerendes_path(:keyword => "埼玉")%></li>
+          <li class="pull-down-list"><%= link_to'神奈川',search_gerendes_path(:keyword => "神奈川")%></li>
+          <li class="pull-down-list"><%= link_to'新潟',search_gerendes_path(:keyword => "新潟")%></li>
+          <li class="pull-down-list"><%= link_to'富山',search_gerendes_path(:keyword => "富山")%></li>
+          <li class="pull-down-list"><%= link_to'石川',search_gerendes_path(:keyword => "石川")%></li>
+          <li class="pull-down-list"><%= link_to'福井',search_gerendes_path(:keyword => "福井")%></li>
+          <li class="pull-down-list"><%= link_to'山梨',search_gerendes_path(:keyword => "山梨")%></li>
+          <li class="pull-down-list"><%= link_to'長野',search_gerendes_path(:keyword => "長野")%></li>
+          <li class="pull-down-list"><%= link_to'岐阜',search_gerendes_path(:keyword => "岐阜")%></li>
+          <li class="pull-down-list"><%= link_to'静岡',search_gerendes_path(:keyword => "静岡")%></li>
+          <li class="pull-down-list"><%= link_to'愛知',search_gerendes_path(:keyword => "愛知")%></li>
+          <li class="pull-down-list"><%= link_to'三重',search_gerendes_path(:keyword => "三重")%></li>
+          <li class="pull-down-list"><%= link_to'滋賀',search_gerendes_path(:keyword => "滋賀")%></li>
+          <li class="pull-down-list"><%= link_to'京都',search_gerendes_path(:keyword => "京都")%></li>
+          <li class="pull-down-list"><%= link_to'兵庫',search_gerendes_path(:keyword => "兵庫")%></li>
+          <li class="pull-down-list"><%= link_to'奈良',search_gerendes_path(:keyword => "奈良")%></li>
+          <li class="pull-down-list"><%= link_to'鳥取',search_gerendes_path(:keyword => "鳥取")%></li>
+          <li class="pull-down-list"><%= link_to'島根',search_gerendes_path(:keyword => "島根")%></li>
+          <li class="pull-down-list"><%= link_to'岡山',search_gerendes_path(:keyword => "岡山")%></li>
+          <li class="pull-down-list"><%= link_to'広島',search_gerendes_path(:keyword => "広島")%></li>
+          <li class="pull-down-list"><%= link_to'山口',search_gerendes_path(:keyword => "山口")%></li>
+          <li class="pull-down-list"><%= link_to'徳島',search_gerendes_path(:keyword => "徳島")%></li>
+          <li class="pull-down-list"><%= link_to'愛媛',search_gerendes_path(:keyword => "愛媛")%></li>
+          <li class="pull-down-list"><%= link_to'高知',search_gerendes_path(:keyword => "高知")%></li>
+          <li class="pull-down-list"><%= link_to'佐賀',search_gerendes_path(:keyword => "佐賀")%></li>
+          <li class="pull-down-list"><%= link_to'大分',search_gerendes_path(:keyword => "大分")%></li>
 
         </ul>      
     </ul>
