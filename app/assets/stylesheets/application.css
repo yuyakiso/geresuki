@@ -90,6 +90,17 @@ body{
   margin-right: 2vw;
 }
 
+.header_btn{
+  width: 90px;
+  height: 30px;
+  background-color: #3ccace;
+  border-radius: 10px;
+}
+
+.header_btn:hover, .search-btn:hover{
+  background-color: #ffff00;
+}
+
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
@@ -115,6 +126,12 @@ body{
   color: #333333;
 }
 /*gerendes/index*/
+
+.gerende-index{
+  background-image:url('geresuki3.jpg');
+  background-size: 100px;
+  background-position: top center;
+}
 
 .main-image{
   height: 500px;
@@ -152,7 +169,6 @@ body{
 }
 
 .form {
-
   display: flex;
 }
 
@@ -188,20 +204,22 @@ body{
 }
 
 .comment-image{
-  width: 90%;
+  width: 85vw;
   height: 400px;
 }
 
 .btn{
-  width: 5vw;
+  width: 50px;
   height: 5vh;
   background-color: black;
   color: white;
   border-radius: 10px;
+  float: right;
+  
 }
 
 /*gerendes/footer*/
-.fotter {
+.footer {
   width: 100%;
   min-width: 800px;
   height: 200px;
@@ -210,13 +228,13 @@ body{
   flex-direction: column;
 }
 
-.fotter-text-wrap {
+.footer-text-wrap {
   margin: 30px 0;
   display: flex;
   justify-content: center;
 }
 
-.fotter-text {
+.footer-text {
   color: #333;
   font-size: 12px;
   margin: 0 10px;
