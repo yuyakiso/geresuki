@@ -22,7 +22,7 @@ body{
 
 .geresuki-icon{
   width: 30vw;
-  height: 10vh;
+  height: 100px;
 }
 
 .search-bar-contents {
@@ -46,15 +46,17 @@ body{
 }
 
 .search-text{
-  width: 30vw;
+  width: 20vw;
+  height: 30px;
 }
 
 .search-btn {
   width: 5vh;
+  height: 30px;
   margin-right: 2vw;
   border: 0;
   background-color: #3ccace;
-  padding: 8px;
+  padding: 4px;
   border-radius: 10px;
 }
 
