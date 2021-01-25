@@ -55,7 +55,6 @@ body{
   width: 5vh;
   height: 30px;
   margin-right: 2vw;
-  border: 0;
   background-color: #3ccace;
   padding: 4px;
   border-radius: 10px;
@@ -154,6 +153,7 @@ body{
 
 .list{
   list-style: none;
+  font-size: 20px;
 }
 
 /*gerendes/show*/
