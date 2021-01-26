@@ -1,7 +1,16 @@
 <%= render "shared/header" %>
 <div class='gerende-index'>
-  <div>
-    <%= image_tag 'geresuki1', class: 'main-image' %>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><%= link_to image_tag('geresuki1', class: 'main-image'), "#" %></div>
+      <div class="swiper-slide"><%= image_tag 'geresuki4', class: 'main-image' %></div>
+      <div class="swiper-slide"><%= image_tag 'geresuki5', class: 'main-image' %></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
     <h2>ゲレスキとは</h2>
     <div class= "">ゲレスキとは各ゲレンデの「こんなところがスキ！」や「このコースのこんなところ面白い」などを画像や文字で投稿できます！そして、それをみてたくさんのゲレンデに行ってスノーシーズンを楽しむために使ってください！</div>
