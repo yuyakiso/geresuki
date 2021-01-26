@@ -1,4 +1,12 @@
 ja:
-       nickname: ニックネーム
-       text: テキスト
-       image: 画像
+
+  views:
+      pagination:
+        first: '最初'
+        last: '最後'
+        previous: '前'
+        next: '次'
+        truncate: '...'
+        nickname: ニックネーム
+        text: テキスト
+        image: 画像
