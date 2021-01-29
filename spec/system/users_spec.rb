@@ -24,7 +24,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
     }.to change { User.count }.by(1)
     # トップページへ遷移したことを確認する
     expect(current_path).to eq root_path
-    # カーソルを合わせるとログアウトボタンが表示されることを確認する
+    # ログアウトボタンが表示されることを確認する
     expect(
       find(".logout").hover
     ).to have_content('ログアウト')

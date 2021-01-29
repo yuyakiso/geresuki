@@ -8,8 +8,9 @@ RSpec.describe "Comments", type: :system do
 
   context '投稿に失敗した時' do
     it '送る値が全て空だとコメントの送信に失敗すること' do
+      # サインインする
       sign_in(@comment.user)
-      # 作成されたチャットルームへ遷移する
+      # ゲレンデ一覧より、閲覧したい名前をクリックする
       click_on(@gerende.name)
       # DBに保存されていないことを確認する
       expect {
@@ -24,7 +25,7 @@ RSpec.describe "Comments", type: :system do
       # サインインする
       sign_in(@comment.user)
 
-      # 作成されたチャットルームへ遷移する
+      # ゲレンデ一覧より、閲覧したい名前をクリックする
       click_on(@gerende.name)
 
       # 値をテキストフォームに入力する
@@ -47,7 +48,7 @@ RSpec.describe "Comments", type: :system do
       # サインインする
       sign_in(@comment.user)
 
-      # 作成されたチャットルームへ遷移する
+      # ゲレンデ一覧より、閲覧したい名前をクリックする
       click_on(@gerende.name)
 
       # 添付する画像を定義する
@@ -72,7 +73,7 @@ RSpec.describe "Comments", type: :system do
       # サインインする
       sign_in(@comment.user)
 
-      # 作成されたチャットルームへ遷移する
+      # ゲレンデ一覧より、閲覧したい名前をクリックする
       click_on(@gerende.name)
 
       # 添付する画像を定義する
