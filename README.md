@@ -22,7 +22,7 @@ geresuki.herokuapp.com
 # 実際のGIF
 ![sample1](https://gyazo.com/a52210301e1af3b2abb23040774ffa09/raw)  
 
-![sample2](https://gyazo.com/f7a52fc01d4214428a2fb4fd5f812ce0/raw)
+![sample2](https://gyazo.com/f8965420e41072a42e308797fcbeb8b6/raw)
 
 # ER図
 ![sample3](https://gyazo.com/26b4cb6e48d8c0b5ad523e535fa9aed5/raw)
