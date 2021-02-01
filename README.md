@@ -25,45 +25,51 @@ geresuki.herokuapp.com
 
 
 # ER図
-https://gyazo.com/26b4cb6e48d8c0b5ad523e535fa9aed5
+![sample3](https://gyazo.com/26b4cb6e48d8c0b5ad523e535fa9aed5/raw)
 
 # ローカルでの動作方法
-ruby version 6.0
-$ git clone https://github.com/yuyakiso/geresuki.git
-$ cd geresuki
-$ bundle install
-$ rails db:create
-$ rails db:migrate
-$ rails s
+ruby version 6.0  
+git clone https://github.com/yuyakiso/geresuki.git  
+cd geresuki  
+bundle install  
+rails db:create  
+rails db:migrate  
+rails s  
 👉 http://localhost:3000
 
 
-## usersテーブル
-｜ Column             | Type       | Option                       |  
-｜ ------------------ | ---------- | ---------------------------- |  
-｜ nickname           | string     | null: false                  |  
-｜ email              | string     | null: false, unique: true    |  
-｜ encrypted_password | string     | null: false                  |  
+## users テーブル
+
+| Column             | Type       | Option                       |
+| ------------------ | ---------- | ---------------------------- |
+| nickname           | string     | null: false                  |
+| email              | string     | null: false, unique: true    |
+| encrypted_password | string     | null: false                  |
 
 ### Association
+
 - has_many :comments
 
-## gerendesテーブル
-｜ Column             | Type       | Option                        |  
-｜------------------- | ---------- | ----------------------------- |  
-｜ name               | string     | null false                    |  
-｜ prefecture_id      | integer    | null false                    |  
-｜ image              | string     | null false                    |  
+## gerendes テーブル
+
+| Column             | Type       | Option                        |
+|------------------- | ---------- | ----------------------------- |
+| name               | string     | null false                    |
+| prefecture_id      | integer    | null false                    |
+| image              | string     | null false                    |
 
 ### Association
+
 - has_many :comments
 
-## commentsテーブル
-｜ Column             | Type       | Option                        |  
-｜ ------------------ | ---------- | ----------------------------- |  
-｜ user               | references | null false, foreign key :true |  
-｜ gerende            | references | null false, foreign key :true |  
+## comments テーブル
+
+| Column             | Type       | Option                        |
+| ------------------ | ---------- | ----------------------------- |
+| user               | references | null false, foreign key :true |
+| gerende            | references | null false, foreign key :true |
 
 ### Association
+
 - belongs_to :user
 - belongs_to :gerende
