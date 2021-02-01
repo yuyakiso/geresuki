@@ -1,9 +1,9 @@
 # アプリケーション名
-ここのゲレンデのここがスキ（略称ゲレスキ）
+ここのゲレンデのここがスキ（略称ゲレスキ）  
 ゲレンデについてのコメント投稿を行う
 
 # 概要
-ゲレンデについてのコメントを各ゲレンデごとにすることができる。
+ゲレンデについてのコメントを各ゲレンデごとにすることができる。そしてそれは世界中誰でも閲覧できる。
 
 # URL
 geresuki.herokuapp.com
@@ -21,8 +21,8 @@ geresuki.herokuapp.com
 
 # 実際のGIF
 ![sample1](https://gyazo.com/a52210301e1af3b2abb23040774ffa09/raw)  
-![sample2](https://gyazo.com/f7a52fc01d4214428a2fb4fd5f812ce0/raw)
 
+![sample2](https://gyazo.com/f7a52fc01d4214428a2fb4fd5f812ce0/raw)
 
 # ER図
 ![sample3](https://gyazo.com/26b4cb6e48d8c0b5ad523e535fa9aed5/raw)
