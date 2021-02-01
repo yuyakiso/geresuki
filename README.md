@@ -29,7 +29,13 @@ https://gyazo.com/26b4cb6e48d8c0b5ad523e535fa9aed5
 
 # ローカルでの動作方法
 ruby version 6.0
-gem install bundler
+$ git clone https://github.com/yuyakiso/geresuki.git
+$ cd geresuki
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
 
 
 ## usersテーブル
